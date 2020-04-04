@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+:root {
+  --color-main: #7159c1;
+  --color-span: #f7df1e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--color-main);
+}
+header {
+  background-color: white;
+  width: 100%;
+  padding: 32px;
+  text-align: center;
+  box-sizing: border-box;
+}
+.nav-header {
+  font-size: 22px;
+}
+.nav-header a {
+  text-decoration: none;
+  color: #777;
+  position: relative;
+}
+.nav-header a + a {
+  margin-left: 32px;
+}
+.nav-header a.active {
+  font-weight: 700;
+  color: var(--color-main);
+}
+.nav-header a:hover {
+  color: var(--color-main);
+}
+.nav-header a::after {
+  content: "";
+  width: 0;
+  height: 2.5px;
+  background-color: var(--color-main);
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+}
+.nav-header a:hover::after {
+  width: 100%;
+  transition: width 200ms ease-in-out;
+}
+
+/* Page teachers index */
+
+.card {
+  width: 800px;
+  min-height: 400px;
+  background-color: white;
+  margin: 45px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  box-shadow: 0 2px 6px -2px rgba(0, 0, 0, 0.4);
+  animation: up 200ms ease-out;
+}
+@keyframes up {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+  }
+}
+.details {
+  padding: 32px;
+}
+.details .detail {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 16px 0;
+}
+.details .detail:last-child {
+  border: none;
+}
+.details h3,
+.details .detail div:nth-child(1) {
+  color: #777;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+}
+.details .detail div:nth-child(2) {
+  color: #555;
+  font-weight: 700;
+  font-size: 18px;
+}
+.details h3 {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--color-main);
+}
+.details .detail span {
+  padding: 8px 16px;
+  background-color: var(--color-span);
+  border-radius: 16px;
+  color: #777;
+  margin-right: 4px;
+  margin-top: 8px;
+  display: inline-block;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+/* Page teachers form create */
+
+input {
+  width: 100%;
+  outline: none;
+  color: #555;
+  font-weight: 700;
+  font-size: 18px;
+}
+select {
+  width: 100%;
+  outline: none;
+}
+input[type="radio"] {
+  width: initial;
+  margin-right: 4px;
+}
+input::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+}
+button[type="submit"] {
+  padding: 8px 32px;
+  background-color: var(--color-main);
+  color: white;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 32px;
+  width: 100%;
+}

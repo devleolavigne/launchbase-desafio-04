@@ -1,0 +1,55 @@
+{% extends "layout.njk" %}
+{% block title %}
+  <title>Teachers</title>
+{% endblock title %}
+{% block content %}
+  <form class="card" method="POST" action="/teachers">
+    <section class="avatar" style="background: url(https://source.unsplash.com/collection/8355967/900x900) no-repeat center center / cover"></section>
+    <section class="details">
+      <h3>New Teacher</h3>
+      <div class="detail">
+        <div>Avatar URL</div>
+        <div>
+          <input type="url" name="avatar_url" placeholder="http://">
+        </div>
+      </div>
+      <div class="detail">
+        <div>Teacher</div>
+        <div>
+          <input type="text" name="name" placeholder="You full name">
+        </div>
+      </div>
+      <div class="detail">
+        <div>Date of birth</div>
+        <div>
+          <input type="date" name="birth">
+        </div>
+      </div>
+      <div class="detail">
+        <div>Education Level</div>
+        <div>
+          <select name="education">
+            <option value="technologist">Technologist</option>
+            <option value="bachelor">Bachelor</option>
+            <option value="master">Master</option>
+            <option value="doctor">Doctor</option>
+          </select>
+        </div>
+      </div>
+      <div class="detail">
+        <div>Class Method</div>
+        <div>
+          <span><input type="radio" name="online" checked="checked">Online</span>
+          <span><input type="radio" name="presential">Presential</span>
+        </div>
+      </div>
+      <div class="detail">
+        <div>Knowledge</div>
+        <div>
+          <input type="text" name="services" placeholder="Separate areas of knowledge with a comma">
+        </div>
+      </div>
+      <button type="submit">Save</button>
+    </section>
+  </form>
+{% endblock content %}

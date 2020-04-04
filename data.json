@@ -1,0 +1,22 @@
+{
+  "teachers": [
+    {
+      "avatar_url": "https://google.com",
+      "name": "Leonardo Lavigne",
+      "birth": "1978-03-03",
+      "education": "bachelor",
+      "online": "on",
+      "services": "Javascript, C++",
+      "created_at": 1585953981702
+    },
+    {
+      "avatar_url": "https://google.com",
+      "name": "Leonardo Lavigne",
+      "birth": 257731200000,
+      "education": "bachelor",
+      "online": "on",
+      "services": "Javascript, C++",
+      "created_at": 1585954164455
+    }
+  ]
+}
